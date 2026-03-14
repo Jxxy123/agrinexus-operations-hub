@@ -4,6 +4,37 @@
 ## 📖 Project Overview
 AgriNexus is a next-generation operations dashboard designed to protect national food security. By moving away from simple chatbots to a **Multi-Agent Swarm** architecture using the **Google Agent Development Kit**, AgriNexus can proactively identify crop disease risks and map geospatial threats across entire agricultural regions.
 
+🤖 Agent Profiles
+
+   Agent Name : Manager Orchestrator,  Pathology Specialist,  Logistics Specialist
+
+   Role :       Team Lead,             Scientist,             Operations
+
+   Core Responsibility : Analyzes user intent and routes tasks to the correct specialist, Uses deep-learning logic to diagnose crop diseases and suggest treatments, Accesses geospatial farm data to identify which areas are at immediate risk.
+
+   🛠️ Setup Instructions
+
+   1. Clone the Repository
+      git clone <https://github.com/Jxxy123/agrinexus-operations-hub.git>
+      cd agrinexus_hackathon
+
+   2. Create a .env file in the root directory and add your Google_API_KEY
+      GOOGLE_API_KEY=your_actual_api_key_here
+      
+   3. Install Dependencies
+      pip install -r requirements.txt
+
+   4. Run the Dashboard Locally
+      streamlit run app/main.py
+
+🚀 Deployment
+This project is optimized for Google Cloud Run.
+
+Live Demo: [https://agrinexus-hub-614432721568.us-central1.run.app/]
+
+Build Engine: Google Artifact Registry
+
+
 ## 🏗️ System Architecture
 The hub utilizes a hierarchical swarm logic. The **Manager Orchestrator** receives user input and delegates tasks to specialized agents based on the context of the agricultural emergency.
 
