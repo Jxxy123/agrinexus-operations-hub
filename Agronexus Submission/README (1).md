@@ -1,7 +1,3 @@
-### 🔄 System Architecture & Data Flow
-Below is the functional breakdown of how AgriNexus processes requests using the Google ADK Multi-Agent Swarm:
-
-```mermaid
 flowchart TD
     %% Node Styling
     classDef userNode fill:#FF0055,stroke:#FFFFFF,stroke-width:2px,color:#FFFFFF,font-weight:bold;
@@ -12,10 +8,10 @@ flowchart TD
 
     User((User)):::userNode -->|Enters query in chat input| UI[Streamlit UI Dashboard]:::uiNode
     
-    UI -->|Passes prompt via fetch_ai_response| Orchestrator{manager_agent\n(The Orchestrator)}:::orchestratorNode
+    UI -->|Passes prompt via fetch_ai_response| Orchestrator{"manager_agent (The Orchestrator)"}:::orchestratorNode
     
-    Orchestrator -->|Disease query| Pathology[pathology_agent\nPathology Specialist]:::specialistNode
-    Orchestrator -->|Farm location/data query| Logistics[logistics_agent\nLogistics Specialist]:::specialistNode
+    Orchestrator -->|Disease query| Pathology["pathology_agent (Pathology Specialist)"]:::specialistNode
+    Orchestrator -->|Farm location data query| Logistics["logistics_agent (Logistics Specialist)"]:::specialistNode
     
     Pathology -->|Diagnoses crop diseases| UI
     
