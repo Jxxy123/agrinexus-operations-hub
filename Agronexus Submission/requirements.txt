@@ -1,4 +1,5 @@
-streamlit
 google-generativeai
+streamlit
 python-dotenv
-google-adk
+Pillow
+gTTS
