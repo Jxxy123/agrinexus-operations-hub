@@ -23,17 +23,21 @@ AgriNexus is a next-generation operations dashboard designed to protect national
 
 1. **Clone the Repository**
 
-  git clone <https://github.com/Jxxy123/agrinexus-operations-hub.git>
+   git clone <https://github.com/Jxxy123/agrinexus-operations-hub.git>
+
    cd agrinexus-operations-hub
 
    2. Environment Variables
-   Create a .env file in the root directory and add your Google_API_KEY
-   GOOGLE_API_KEY=your_actual_api_key_here
+      Create a .env file in the root directory and add your Google_API_KEY
+
+      GOOGLE_API_KEY=your_actual_api_key_here
       
-   3. Install Dependencies
+   4. Install Dependencies
+
       pip install -r requirements.txt
 
-   4. Run the Dashboard Locally
+   5. Run the Dashboard Locally
+
       streamlit run app/main.py
 
 🚀 Deployment
@@ -49,34 +53,42 @@ The hub utilizes a hierarchical swarm logic. The Manager Orchestrator receives u
 
 ```mermaid
 graph TD
-    User((Farmer / User))
+    %% Define Node Styling
+    classDef user fill:#4A90E2,stroke:#333,stroke-width:2px,color:#fff;
+    classDef ui fill:#F39C12,stroke:#333,stroke-width:2px,color:#fff;
+    classDef input fill:#3498DB,stroke:#333,stroke-width:2px,color:#fff;
+    classDef security fill:#E74C3C,stroke:#333,stroke-width:2px,color:#fff;
+    classDef ai fill:#27AE60,stroke:#333,stroke-width:2px,color:#fff;
+    classDef post fill:#8E44AD,stroke:#333,stroke-width:2px,color:#fff;
+
+    User((Farmer / User)):::user
 
     subgraph Presentation Layer [1. Frontend UI]
-        UI[Streamlit Chat Interface]
-        Sidebar[Sidebar Controls]
+        UI[Streamlit Chat Interface]:::ui
+        Sidebar[Sidebar Controls]:::ui
     end
 
     subgraph Ingestion Engine [2. Multimodal Input]
-        Vision[Gemini Vision API]
-        TextIn[Text Prompt Input]
+        Vision[Gemini Vision API]:::input
+        TextIn[Text Prompt Input]:::input
     end
 
     subgraph Security & Routing [3. The Gatekeeper]
-        Guardrails{Forbidden Topic?}
-        Router[Intent Router]
+        Guardrails{Forbidden Topic?}:::security
+        Router[Intent Router]:::security
     end
 
     subgraph Agentic Swarm [4. Orchestration Layer]
-        Manager[Manager Agent]
-        Pathology[Pathology Specialist]
-        Climate[Climate Specialist]
-        Logistics[Logistics Specialist]
+        Manager[Manager Agent]:::ai
+        Pathology[Pathology Specialist]:::ai
+        Climate[Climate Specialist]:::ai
+        Logistics[Logistics Specialist]:::ai
     end
 
     subgraph Post-Processing [5. Formatting & Safety]
-        Translator[Live Translation Layer]
-        TTS[Google TTS Audio Engine]
-        HumanCheck[Human Escalation Logic]
+        Translator[Live Translation Layer]:::post
+        TTS[Google TTS Audio Engine]:::post
+        HumanCheck[Human Escalation Logic]:::post
     end
 
     User -->|Uploads Image| Sidebar
