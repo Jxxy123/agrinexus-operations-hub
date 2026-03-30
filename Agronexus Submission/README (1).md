@@ -6,9 +6,9 @@ AgriNexus is a next-generation operations dashboard designed to protect national
 
 ### ✨ Key Features (Swarm v3.0)
 * **Multimodal Vision Scanner:** Upload field photos for instant Gemini 2.5 Flash crop diagnosis.
-* **Cross-Lingual Accessibility:** Live translation engine and Text-to-Speech (TTS) audio output in 7+ languages (Bangla, Hindi, Spanish, etc.) for rural accessibility.
+* **Cross-Lingual Accessibility:** Live translation engine and Text-to-Speech (TTS) audio output in 7+ languages (Malay, Hindi, Spanish, etc.) for rural accessibility.
 * **A2A Orchestration Trace:** "Glass-box" reasoning UI showing internal agent delegations in real-time.
-* **Security Guardrails:** Hardcoded topic filtering to prevent prompt injection and keep the AI strictly focused on agriculture.
+* **Security Guardrails:** Enforce security guardrails against prompt injection and keep the AI strictly focused on agriculture.
 
 ## 🤖 Agent Profiles
 
