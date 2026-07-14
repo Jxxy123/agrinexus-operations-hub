@@ -25,7 +25,7 @@ AgriNexus is a next-generation operations dashboard designed to protect national
 
    git clone <https://github.com/Jxxy123/agrinexus-operations-hub.git>
 
-   cd agrinexus-operations-hub
+   cd "agrinexus-operations-hub/Agronexus Submission"
 
    2. Environment Variables
       Create a .env file in the root directory and add your Google_API_KEY
